@@ -8,10 +8,10 @@ var MongoStore = require('connect-mongo')({
 });
 
 
-createServer = function createServer() {
+var createServer = function() {
 
     var server = express();
-    // specify middleware 
+    // specify middleware
     //server.use(express.bodyParser());
     server.use(express.static(__dirname + '/public'));
     server.use('/product/*', express.static(__dirname + '/public'));
